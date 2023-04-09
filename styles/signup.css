@@ -1,0 +1,70 @@
+.signup-section{
+    height: 100vh;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    /* display: flex; */
+    /* display: none; */
+
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.signup-section .signup-box{
+    height: 600px;
+    width: 400px;
+    background-color: #fff;
+    box-shadow: 20px 20px 60px #ebebeb,
+                -20px -20px 60px #fff;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.signup-section .signup-box form{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -40px;
+}
+.signup-section .signup-box form input[type=text],input[type=password]{
+    height: 40px;
+    width: 90%;
+    border: none;
+    background: #f1f1f1;
+    padding: 0 15px;
+    border-radius: 7px;
+    outline: none;
+}
+.signup-section .signup-box form input[type=submit]{
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    border: none;
+    background: var(--linear);
+    color: var(--color-dark);
+    font-weight: 600;
+}
+.signup-section .signup-box h1{
+    margin-top: 100px;
+    font-size: 3rem;
+    font-family: var(--title-font);
+}
+.signup-section .signup-box p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--color-main);
+    margin-top: 40px;
+}
+p > span{
+    color: rgb(198, 50, 211);
+    cursor: pointer;
+}
+p > span:hover{
+    transition: color .2s;
+
+    color: #7c0074;
+}

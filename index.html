@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <link rel="stylesheet" href="./styles/style.css">
+   <title>nonoChat</title>
+</head>
+<body>
+   <section class = 'authSection'>
+      <section class="signup-section">
+         <div class="signup-box">
+            <h1>sign Up</h1>
+            <!-- Section d'inscriptio -->
+            <form id="signupForm">
+               <input type="text" name ='phone'placeholder="phone" ><br>
+               <input type="password" name ='pass' placeholder="password"><br>
+               <input class = 'sign-Up'type="submit" name="submit">
+               <p>vous avez un compte?<span class="connectLink">se connecter</span></p>
+            </form>
+         </div>
+   
+      </section>
+      
+      <section class="login-section">
+         <div class="login-box">
+            <h1>log In</h1>
+            <!-- section de connection -->
+            <form id="loginForm">
+               <input type="text" name= "phone" placeholder="telephone" ><br>
+               <input type="password" name= "pass"  placeholder="password" ><br>
+               <input class='log-In'type="submit" name="connecter">
+               <p>pas de compte?<span class="signupLink">crée un compte</span></p>
+            </form>
+        
+         </div>
+      </section>
+   </section>
+   
+
+   <!-- section de page de chat  -->
+   <section class="chatPage">
+      <nav class="navigation">
+         <h1>nanoChat</h1>
+         <a href=""><img src="./public/libs/img/pic.png" alt="profile picture"></a>
+     </nav>
+     <!-- header de la page contenant tables de navigation  -->
+     <header class="head">
+      <div class="nav-tab">
+         <div class="tab message">
+            <h3><i class="fas fa-comments"></i></h3>
+         </div>
+         <div class="tab statut">
+            <h3><i class="fa-solid fa-user-group"></i></h3>
+         </div>
+         <div class="tab appel">
+            <h3><i class="fa-solid fa-cog"></i></h3>
+         </div>
+      </div>
+     </header>
+         <div class="chatContener">
+
+
+            <button class="new-chat">
+               <i class="fa fa-plus"></i>
+            </button>
+         </div>
+
+         <div class="contactsContener">
+
+
+            
+         </div>
+
+         <div class="settingsContener">
+
+
+            
+         </div>
+     
+   </section>
+   <!-- section de page de chat  -->
+
+
+
+
+
+
+
+
+
+
+   <!-- <h1>edit Profile</h1> -->
+
+   <!-- <form method="POST" action="api/index.php?action=upload&fileType=piece&destId=28" enctype="multipart/form-data"> -->
+     <!-- On limite le fichier à 100Ko -->
+     <!-- <input type="hidden" name="MAX_FILE_SIZE" value="1000000"> -->
+     <!-- Edit prfile : <input type="file" name="file"> -->
+     <!-- <input type="submit" name="envoyer" value="Envoyer le fichier"> -->
+   <!-- </form> -->
+   <!-- <h3>User name</h3> -->
+   <!-- <form method="POST" action="api/index.php?action=edit-profile&target=pass"> -->
+      <!-- <input type="text" name ='pass' placeholder="Username"><br> -->
+      <!-- <input type="submit" name="submit"> -->
+
+   <!-- </form> -->
+      <script src="public/libs/axios.min.js"></script>
+      <script src="public/script.js"></script>
+</body>
+</html>
