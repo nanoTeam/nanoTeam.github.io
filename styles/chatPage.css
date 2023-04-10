@@ -46,7 +46,6 @@
     cursor: pointer;
 }
 .chatPage header .nav-tab .tab:hover{
-    transition:background .5s;
     color: #f1f1f1;
     background: var(--linear);
 }
@@ -73,8 +72,4 @@ button.new-chat{
 button.new-chat:hover{
     transition: .2s;
     transform: rotate(90deg);
-}
-.settingContener .contactsContener .chat{
-    
-
 }
