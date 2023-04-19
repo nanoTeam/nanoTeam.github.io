@@ -3,7 +3,7 @@
     width: 100%;
     background: rgb(255, 255, 255);
     /* display: flex; */
-    /* display: none; */
+    display: none;
     align-items: center;
     justify-content: center;
 }

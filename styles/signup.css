@@ -3,7 +3,7 @@
     width: 100%;
     background: rgb(255, 255, 255);
     /* display: flex; */
-    /* display: none; */
+    display: none;
 
     align-items: center;
     justify-content: center;
@@ -29,7 +29,7 @@
     flex-direction: column;
     margin-top: -40px;
 }
-.signup-section .signup-box form input[type=text],input[type=password]{
+.signup-section .signup-box form input[type=number],input[type=password]{
     height: 40px;
     width: 90%;
     border: none;

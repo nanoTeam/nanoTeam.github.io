@@ -8,7 +8,21 @@
     --linear: linear-gradient(45deg,#aa076b,#61045f);
     --color-dark: #f4f4f4;
     --color-main: #c5c5c5;
-    --title-font: diranista;
+    --title-font: roboto;
+}
+html{
+    overflow: hidden;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
+::-webkit-scrollbar-thumb{
+    background: transparent;
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    width: 0px;
 }
 body{
     margin: 0;
@@ -19,24 +33,4 @@ body{
 input[type=submit],button:active{
     transform: translateY(4px);
     cursor: pointer;
-}
-.authSection{
-    display: block;
-}
-.chatPage{
-    display: flex;
-}
-.signup-section{
-    display: flex;
-}
-.login-section{
-    display: flex;
-}
-.successfuly{
-    box-shadow: 20px 20px 60px #90e7a3,
-                -20px -20px 60px #fff; 
-}
-.error{
-    box-shadow: 20px 20px 60px #da3737,
-                -20px -20px 60px #fff; 
 }

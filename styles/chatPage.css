@@ -1,11 +1,9 @@
 .chatPage{
-    height: 100vh;
     width: 100%;
-    background: rgb(51, 51, 51);
     margin-top: -20px;
 }
 .chatPage nav{
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     height: 50px;
     display: flex;
@@ -15,61 +13,119 @@
 }
 .chatPage nav h1{
     font-family: var(--title-font);
-    margin: 20px;
 }
-.chatPage nav img{
-    width: 30px;
-    height: 30px;
-    margin: 20px 30px 10px 0;
-    border-radius: 50%;
+.chatPage nav .menu{
+    margin: 20px 30px 0 20px;
+    
 }
-.chatPage header{
-    height: 91vh;
-    width: 100%;
-    background: #dedede;
-    position: relative;
-    top: 70px;
-}
-.chatPage header .nav-tab{
-    width: 100%;
-    height: 50px;
-    background: rgb(240, 240, 240);   
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    position: absolute;
-    top: 0;
-}
-.chatPage header .nav-tab .tab{
-    height: 100%;
-    width: 33.33%;
+.chatPage nav .menu .bx-menu{
+    font-size: 2rem;
     cursor: pointer;
 }
-.chatPage header .nav-tab .tab:hover{
-    color: #f1f1f1;
-    background: var(--linear);
+.chatPage .menu .menu-box{
+    user-select: none;
+    position: absolute;
+    right: 0;
+    height: 0;
+    transition: .3s;
+    opacity: 0;
+    overflow: hidden;
+    width: 200px;
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(224, 222, 222);
 }
-.chatPage header .nav-tab .tab:nth-child(3){
-    /* background-color: rgb(242, 242, 242); */
+.chatPage .menu .menu-box a{
+    height: 50px;
+    padding-left: 15px;
 }
-.chatPage header .nav-tab .tab:nth-child(1){
-    /* background-color: yellow; */
+.chatPage .menu .menu-box.active-menu{
+    height: 300px;
+    opacity: 1;
+
 }
-button.new-chat{
+button.new-contact{
     position: absolute;
     right: 50px;
     bottom: 50px;
-    height: 50px;
-    width: 50px;
+    z-index: 100;
+  
+}
+button.new-contact .bx-plus{
+    padding: 10px;
+    background: var(--linear);
     border: none;
     border-radius: 50%;
     outline: none;
-    background: var(--linear);
+    font-weight: bold;
     color: #f1f1f1;
     font-size: 2rem;
     cursor: pointer;
 }
-button.new-chat:hover{
+button.new-contact .bx-plus:hover{
     transition: .2s;
     transform: rotate(90deg);
 }
+/* .main  */
+header.main{
+    margin-top: 30px;
+    height: 99vh;
+    /* background-color: tan; */
+
+}
+
+header .historique{
+    width: 50%;
+    height: 100%;
+    overflow-y: auto;
+    /* background-color: tan; */
+    border-top: 2px solid rgb(207, 206, 206);
+    box-shadow: 1px 10px 5px rgb(165, 165, 165);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px 10px 10px;
+}
+header .historique h3{
+    font-size: 1.4rem;
+    position: sticky;
+}
+header .historique .all-recent{
+    display: flex;
+    flex-direction: column;
+}
+header .historique .all-recent .self-recent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(242, 242, 242);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+header .historique .self-recent .img{
+    height: 70%;
+    width: 60px;
+    margin-left: 20px;
+    border-radius: 50%;
+    background: var(--linear);
+    overflow: hidden;
+}
+header .historique .self-recent h2{
+    font-size: 1.2rem;
+    margin-right: 40px;
+    padding-left: 10px;
+}
+header .historique .self-recent .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* responsive  */
+@media screen and (min-width:750px) {
+    header .historique{
+        width: 30%;
+    }
+}
+/* responsive  */
+/* .main  */
+ 
