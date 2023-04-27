@@ -7,7 +7,7 @@
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>   
    <script src="https://cdn.tailwindcss.com"></script>
    <link rel="stylesheet" href="./styles/style.css">
-   <title>dashboard</title>
+   <title>Nanochat | chat with your friends</title>
 </head>
 <body>
    <section class="signup-section">
@@ -39,7 +39,7 @@
    <!-- section de page de chat  -->
    <section class="chatPage">
       <nav class="navigation">
-         <h1 class="m-4 text-3xl lg:text-4xl">nanoChat</h1>
+         <h1 class="m-4 text-2xl lg:text-3xl">nanoChat</h1>
 
          <div class="menu">
             <h1><i class="menu-btn bx bx-menu"></i></h1>
@@ -49,6 +49,7 @@
                <a href="#">parameter</a>
                <a href="#">rechercher</a>
                <a href="#">apropos</a>
+               <i class="text-2xl bx bx-moon cursor-pointer"></i>
             </div>
          </div>
      </nav>
@@ -58,72 +59,52 @@
      </button>
    </section>
    <!-- section de page de chat  -->
-   <!-- section conversation  -->
+   <!-- section historique de conversation  -->
    <header class="main">
       <div class="historique">
-         <h3>Recents</h3>
-         <div class="all-recent">
-            <!-- div par personne  -->
-            <div class="self-recent">
-               <div class="img">
-                  <img src="/public/libs/img/pic.png" alt="profile image">
-               </div>
-               <h2>John Doe</h2>
+        <div class="top-box">
+         <div class="left">
+            <div class="img">
+               <img src="/public/libs/img/pic.png" alt="profile pic">
             </div>
-            <!-- div par personne  -->
-            <!-- div par personne  -->
-            <div class="self-recent">
-               <div class="img">
-                  <img src="/public/libs/img/pic.png" alt="profile image">
-               </div>
-               <h2>John Doe</h2>
-            </div>
-            <!-- div par personne  -->
-            <!-- div par personne  -->
-            <div class="self-recent">
-               <div class="img">
-                  <img src="/public/libs/img/pic.png" alt="profile image">
-               </div>
-               <h2>John Doe</h2>
-            </div>
-            <!-- div par personne  -->
-            <!-- div par personne  -->
-            <div class="self-recent">
-               <div class="img">
-                  <img src="/public/libs/img/pic.png" alt="profile image">
-               </div>
-               <h2>John Doe</h2>
-            </div>
-            <!-- div par personne  -->
-            <!-- div par personne  -->
-            <div class="self-recent">
-               <div class="img">
-                  <img src="/public/libs/img/pic.png" alt="profile image">
-               </div>
-               <h2>John Doe</h2>
-            </div>
-            <!-- div par personne  -->
-            <!-- div par personne  -->
-            <div class="self-recent">
-               <div class="img">
-                  <img src="/public/libs/img/pic.png" alt="profile image">
-               </div>
-               <h2>John Doe</h2>
-            </div>
-            <!-- div par personne  -->
-            <!-- div par personne  -->
-            <div class="self-recent">
-               <div class="img">
-                  <img src="/public/libs/img/pic.png" alt="profile image">
-               </div>
-               <h2>John Doe</h2>
-            </div>
-            <!-- div par personne  -->
+            <h1 class="text-2xl mx-4 mt-1">chats</h1>
+         </div>
+         <div class="right">
+            <i class="text-2xl bx bx-dots-vertical-rounded cursor-pointer"></i>
          </div>
       </div>
+      <div class="search-box">
+      <input type="search" name="search" id="search" placeholder="Search name...">
+         <label for="search">
+            <i class="text-2xl bx bx-search cursor-pointer"></i>
+         </label>
+      </div>
+      <div class="conv-box">
+         <ul class="conv-list">
+            <!-- ICI SERONS INJECTEE TOUTES LES COVERSATIONS  -->
+         </ul>
+      </div>
+      </div>
+      <div class="chat-box">
+         <h1 class="text-5xl lg:text-[7rem] font-bold chat-box">Chat box</h1>
+         <p class="text-3xl font-bold text-gray-400">
+            click to <i class="bx bx-plus"></i> to start a new conversation</p>
+         <form>
+            <input type="text" name="message" placeholder="Type a message">
+            <label for="message">
+               <i class="bx bx-send"></i>
+            </label>
+         </form>
+         </div>
    </header>
-   <!-- section conversation  -->
-
+   <!-- section historique de conversation  -->
+<!-- POP-UPS  -->
+<div class="historique-pop">
+   <a>modifier le profil</a>
+   <a>nouveau</a>
+   <a>bloquee</a>
+</div>
+<!-- POP-UPS  -->
 
 
 
@@ -147,7 +128,7 @@
       <!-- <input type="submit" name="submit"> -->
 
    <!-- </form> -->
-
-      <script src="./public/script.js"></script>
+   <script src="./public/script.js"></script>
+   <script src="/public/recent.js"></script>
 </body>
 </html>

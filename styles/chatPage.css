@@ -9,10 +9,10 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: rgb(255, 255, 255);
 }
 .chatPage nav h1{
     font-family: var(--title-font);
+
 }
 .chatPage nav .menu{
     margin: 20px 30px 0 20px;
@@ -23,27 +23,33 @@
     cursor: pointer;
 }
 .chatPage .menu .menu-box{
-    user-select: none;
+    width: 200px;
+    height: 0;
     position: absolute;
     right: 0;
-    height: 0;
+    padding: 10px 0 10px 0;
+    user-select: none;
     transition: .3s;
     opacity: 0;
     overflow: hidden;
-    width: 200px;
-    padding: 10px 0 10px 0;
     display: flex;
     flex-direction: column;
-    background-color: rgb(224, 222, 222);
+    box-shadow: 1px 10px 10px #00000036;
+    background-color: #fff;
 }
 .chatPage .menu .menu-box a{
-    height: 50px;
+    height: 30px;
+    margin-top: 10px;
     padding-left: 15px;
+}
+.chatPage .menu .menu-box .bx{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
 }
 .chatPage .menu .menu-box.active-menu{
     height: 300px;
     opacity: 1;
-
 }
 button.new-contact{
     position: absolute;
@@ -70,60 +76,215 @@ button.new-contact .bx-plus:hover{
 /* .main  */
 header.main{
     margin-top: 30px;
-    height: 99vh;
+    height: 95vh;
+    display: flex;
+    border-bottom: 10px solid green;
     /* background-color: tan; */
 
 }
+/* historique de conversation  */
+.main .historique{
+    width: 30%;
+    height: 95vh;
+    /* background: #f1f1f1; */
+    box-shadow: 1px 10px 10px #00000036;
 
-header .historique{
-    width: 50%;
-    height: 100%;
-    overflow-y: auto;
-    /* background-color: tan; */
-    border-top: 2px solid rgb(207, 206, 206);
-    box-shadow: 1px 10px 5px rgb(165, 165, 165);
-    display: flex;
-    flex-direction: column;
-    padding: 20px 10px 10px 10px;
 }
-header .historique h3{
-    font-size: 1.4rem;
-    position: sticky;
-}
-header .historique .all-recent{
+.main .historique .top-box{
     display: flex;
-    flex-direction: column;
-}
-header .historique .all-recent .self-recent{
-    display: flex;
-    align-items: center;
+    height: 70px;
+    background: #f5f5f5;
     justify-content: space-between;
-    background: rgb(242, 242, 242);
-    border-radius: 10px;
-    margin-top: 10px;
+    align-items: center;
+    padding: 10px 10px;
 }
-header .historique .self-recent .img{
-    height: 70%;
-    width: 60px;
-    margin-left: 20px;
+.main .historique .top-box .left{
+    display: flex;
+}
+.main .historique .top-box .left .img{
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: var(--linear);
     overflow: hidden;
+    background: var(--linear);
 }
-header .historique .self-recent h2{
-    font-size: 1.2rem;
-    margin-right: 40px;
-    padding-left: 10px;
-}
-header .historique .self-recent .img img{
+.main .historique .top-box .left .img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+.historique .search-box{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:5px;
+}
+.historique .search-box input[type=search]{
+    width: 95%;
+    height: 40px;
+    padding: 5px 10px;
+    outline: none;
+    /* border: none; */
+    background-color: transparent;
+    border-bottom: 2px solid #aa076b;
+}
+.historique .search-box input[type=search]:focus{
+    transition: border .2s;
+    background: transparent;
+    border: 2px solid #aa076b;
+}
+.historique .search-box label{
+    position: absolute;
+    right: 10px;
+    top: 2px;
+}
+/* BOITES DES CONVESATIONS STYLISEE EN GROUPE ET SEUL  */
+.conv-list{
+    height: 80vh;
+    width: 95%;
+    /* background: rgb(220, 219, 219); */
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+.conv-list .conv-item{
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+.conv-list .conv-item .left{
+    display: flex;
+    align-items: center;
+}
+.conv-list .conv-item .left .img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--linear);
+}
+.conv-list .conv-item .left .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.conv-list .conv-item .left .textes{
+    height: 100%;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.conv-list .conv-item .left .textes h4{
+    font-weight: 550;
+    text-transform: capitalize;
+    color: var(--p-color);
+}
+.conv-list .conv-item .left .textes p{
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    overflow-y: hidden;
+    color: var(--color-main);
+}
+.conv-list .conv-item .right h5{
+    font-weight: 550;
+    color: var(--color-main);
+}
+.conv-list .conv-item .right p{
+    width: 20px;
+   font-size: 12px;
+    background: var(--linear);
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 600;
+    color: #f1f1f1;
+    margin-left: 20px;
+}
+/* BOITES DES CONVESATIONS STYLISEE EN GROUPE ET SEUL  */
+/* historique de conversation  */
+
+/* SCRIPT DE LA SECTION FRERE CHAT BOX  */
+header.main .chat-box{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header.main .chat-box form{
+    width: 55%;
+    position: absolute;
+    bottom: 10px;
+}
+header.main .chat-box form input{
+    height: 40px;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    outline: none;
+    /* border: none; */
+    background-color: transparent;
+    border-bottom: 2px solid #aa076b;
+}
+header.main .chat-box form label{
+    position: absolute;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    transform: rotate(-10deg);
+}
+header.main .chat-box form label:hover{
+    translate: 3px;
+}
+/* SCRIPT DE LA SECTION FRERE CHAT BOX  */
+/* POP-UPS SCRIPTS  */
+.historique-pop{
+    top: 110px;
+    left: 150px;
+    height: 0;
+    width: 150px;
+    position: absolute;
+    padding: 10px;
+    user-select: none;
+    transition: .3s;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 10px 10px #00000036;
+    background-color: #fff;
+}
+.historique-pop a{
+    margin-top: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.historique-pop.active-pop{
+    transition: height .3s;
+    height: 150px;
+    opacity: 1;
+}
+/* POP-UPS SCRIPTS  */
+
+
+
+
+
+
+
+
+
 /* responsive  */
-@media screen and (min-width:750px) {
-    header .historique{
-        width: 30%;
+@media screen and (max-width:850px) {
+    .main .historique{
+        width: 40%;
+    }
+    .main .historique .top-box{
+        height: 50px;
     }
 }
 /* responsive  */
